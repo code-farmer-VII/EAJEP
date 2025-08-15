@@ -16,7 +16,6 @@ import { router } from "expo-router";
 import bgimg1 from "@/assets/Frame 4.png";
 import bgimg2 from "@/assets/Frame 7.png";
 import bgimg3 from "@/assets/Frame 6.png";
-import WelcomeScreen from "@/components/welcome";
 
 const { width } = Dimensions.get("window");
 
@@ -52,7 +51,7 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <ScrollView className="flex-1 bg-white pt-4">
+    <ScrollView className="flex-1 bg-white pt-20">
       <StatusBar style="dark" />
 
       {/* Auto Slider */}
@@ -104,7 +103,61 @@ export default function App() {
         ))}
       </View>
 
-   <WelcomeScreen />
+      {/* Subscription Section */}
+      <View className="bg-white m-4 rounded-xl border border-gray-200 shadow p-4">
+        <Text className="text-lg font-bold text-gray-900">
+          Ethiopia Aviation Entrance Preparation
+        </Text>
+        <Text className="text-sm text-gray-600 mt-1">
+          Your Ultimate Exam Companion!
+        </Text>
+
+        {/* Subscription Price */}
+        <View className="flex-row items-center bg-green-50 rounded-lg p-2 mt-4">
+          <Text className="text-green-700 font-bold text-lg">
+            💳 Subscription
+          </Text>
+          <View className="ml-auto bg-green-500 px-3 py-1 rounded-full">
+            <Text className="text-white font-bold">500 birr/year</Text>
+          </View>
+        </View>
+
+        {/* Features */}
+        <View className="mt-4 space-y-3">
+          <View>
+            <Text className="text-green-600 font-bold">
+              Unlock full access to:
+            </Text>
+            <Text className="mt-1 text-gray-700">
+              📚 <Text className="font-bold">Comprehensive Exam Bank</Text> — Access 500+ practice exams covering all key aviation subjects
+            </Text>
+          </View>
+
+          <View>
+            <Text className="text-gray-700">
+              🎤 <Text className="font-bold">Extensive Interview Questions</Text> — Prepare with 200+ real-life interview questions commonly asked in the Ethiopian Aviation Academy and airline selection processes
+            </Text>
+          </View>
+
+          <View>
+            <Text className="text-gray-700">
+              🖥 <Text className="font-bold">Simulated Test Experience</Text> — Practice with real-time mock exams that simulate the actual test environment
+            </Text>
+          </View>
+        </View>
+
+        {/* Footer Text */}
+        <Text className="mt-4 text-gray-800 font-medium">
+          Your dream of becoming an aviator starts here! Stay ahead with Ethiopia’s most trusted aviation prep app.
+        </Text>
+
+        {/* Payment Button */}
+        <TouchableOpacity className="mt-4 bg-purple-600 py-3 rounded-full" onPress={() => router.push("/PaymentInformation")}>
+          <Text className="text-center text-white font-bold">
+            Go to Payment
+          </Text>
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 }

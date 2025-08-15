@@ -18,8 +18,10 @@ export default function Layout() {
       <Stack.Screen name="splashScreen1" options={{ headerShown: false }} />
       <Stack.Screen name="splashScreen2" options={{ headerShown: false }} />
       <Stack.Screen name="splashScreen3" options={{ headerShown: false }} />
+      <Stack.Screen name="splashScreen4" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="(payment)" options={{ headerShown: false }} />
     </Stack>
   );
 }

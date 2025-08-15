@@ -1,38 +1,58 @@
 import React from 'react';
 import { FontAwesome } from '@expo/vector-icons';
-import { Tabs } from 'expo-router';
+import { Tabs, router } from 'expo-router';
+import { TouchableOpacity } from 'react-native';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: '#8200db',
+        headerRight: () => (
+          <TouchableOpacity
+            style={{ marginRight: 15 }}
+            onPress={() => router.push('/profile')} // Navigate to your profile page
+          >
+            <FontAwesome name="user-circle" size={28} color="#8200db" />
+          </TouchableOpacity>
+        ),
+      }}
+    >
       <Tabs.Screen
         name="Introduction"
         options={{
           title: 'Introduction',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="home" color={color} />
+          ),
         }}
       />
 
-
       <Tabs.Screen
-        name="Exam"
+        name="Exams"
         options={{
-          title: 'Exam',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="pencil" color={color} />,
+          title: 'Exams',
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="edit" color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="Interview"
         options={{
           title: 'Interview',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="comments" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="microphone" color={color} />
+          ),
         }}
       />
       <Tabs.Screen
-        name="About"
+        name="Notes"
         options={{
-          title: 'About',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="info-circle" color={color} />,
+          title: 'Notes',
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="sticky-note" color={color} />
+          ),
         }}
       />
     </Tabs>

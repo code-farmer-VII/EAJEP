@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { View, Text, Image , Animated } from "react-native";
+import { View, Text, Image, Animated } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -7,16 +7,13 @@ import icon from "@/assets/images/Logo.png";
 import { useNavigation } from "@react-navigation/native";
 import { router } from "expo-router";
 
-
-
 export default function SplashScreen() {
-
-    const fadeAnimation = useRef(new Animated.Value(0)).current;
+  const fadeAnimation = useRef(new Animated.Value(0)).current;
   const navigation = useNavigation();
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      router.push('/splashScreen1')
+      router.push('/splashScreen1');
     }, 3000);
 
     Animated.timing(fadeAnimation, {
@@ -25,14 +22,14 @@ export default function SplashScreen() {
       useNativeDriver: true,
     }).start();
 
-    return () => clearTimeout(timeoutId); 
-  }, [fadeAnimation, navigation]);  
+    return () => clearTimeout(timeoutId);
+  }, [fadeAnimation, navigation]);
+
   return (
     <SafeAreaView className="flex flex-1 bg-[#6434C4]">
       <StatusBar style="light" />
       <View className="flex-1 justify-center items-center bg-[#6434C4]">
-        {/* <FontAwesome5 name="plane" size={60} color="white" /> */}
-        <Image className="w-20 h-20" source={icon}  />
+        <Image className="w-20 h-20" source={icon} />
         <Text className="text-white font-bold text-4xl mt-4">
           EthioSky Academy
         </Text>
