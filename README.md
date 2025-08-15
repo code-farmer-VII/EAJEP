@@ -69,17 +69,21 @@ Here is a **relational database schema** in **table format** based on your app's
 
 ---
 
-### ❓ **Questions**
 
-| Column Name     | Data Type | Description                      |
-| --------------- | --------- | -------------------------------- |
-| question\_id    | INT (PK)  | Unique question ID               |
-| exam\_id        | INT (FK)  | Associated exam                  |
-| question\_text  | TEXT      | The actual question              |
-| question\_image | VARCHAR   | URL/path to image (nullable)     |
-| instruction     | TEXT      | Optional instructions (nullable) |
-| passage\_id     | INT (FK)  | FK to Passages table (nullable)  |
+### ✅ **Updated Tables**
 
+#### ❓ **Questions**
+
+| Column Name        | Data Type | Description                        |
+| ------------------ | --------- | ---------------------------------- |
+| question\_id       | INT (PK)  | Unique question ID                 |
+| exam\_id           | INT (FK)  | Linked to Exams                    |
+| question\_text     | TEXT      | The actual question                |
+| question\_image    | VARCHAR   | URL/path to image (nullable)       |
+| instruction        | TEXT      | Optional instructions (nullable)   |
+| passage\_id        | INT (FK)  | FK to Passages table (nullable)    |
+| explanation\_text  | TEXT      | Explanation for the correct answer |
+| explanation\_image | VARCHAR   | Image explanation (nullable)       |
 ---
 
 ### 📄 **Passages** (For Reading Comprehension)
@@ -91,7 +95,7 @@ Here is a **relational database schema** in **table format** based on your app's
 
 ---
 
-### ✅ **Options**
+#### ✅ **Options** (No change, but reaffirmed)
 
 | Column Name  | Data Type | Description                        |
 | ------------ | --------- | ---------------------------------- |
@@ -115,11 +119,15 @@ Here is a **relational database schema** in **table format** based on your app's
 
 ### 🎤 **InterviewQuestions**
 
-| Column Name    | Data Type | Description        |
-| -------------- | --------- | ------------------ |
-| interview\_id  | INT (PK)  | Unique ID          |
-| department\_id | INT (FK)  | Related department |
-| question\_text | TEXT      | Interview question |
+| Column Name        | Data Type | Description                              |
+| ------------------ | --------- | ---------------------------------------- |
+| interview\_id      | INT (PK)  | Unique ID                                |
+| department\_id     | INT (FK)  | Related department                       |
+| question\_text     | TEXT      | Interview question                       |
+| answer\_text       | TEXT      | Suggested answer                         |
+| explanation\_text  | TEXT      | Explanation of the answer (optional)     |
+| explanation\_image | VARCHAR   | URL/path to explanation image (optional) |
+
 
 ---
 
@@ -146,3 +154,5 @@ Let me know if you want this as:
 * JSON structure for a NoSQL database
 
 Or any other format.
+
+
