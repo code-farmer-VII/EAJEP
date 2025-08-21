@@ -1,0 +1,8 @@
+Subject,Question,QuestionImage,OptionA,OptionAImage,OptionB,OptionBImage,OptionC,OptionCImage,OptionD,OptionDImage,CorrectAnswer,Explanation,
+Math,What is the value of 2 + 2?,,4,,3,,2,,1,,A,Adding 2 and 2 gives 4.,
+History,Who was the first President of the United States?,https://i.pinimg.com/originals/dc/55/a7/dc55a7baa9cbd457221ae6d12d9b1b51.jpg,George Washington,https://i.pinimg.com/originals/dc/55/a7/dc55a7baa9cbd457221ae6d12d9b1b51.jpg,Thomas Jefferson,https://i.pinimg.com/originals/dc/55/a7/dc55a7baa9cbd457221ae6d12d9b1b51.jpg,Abraham Lincoln,,John Adams,,A,George Washington was the first U.S. President, serving from 1789 to 1797.
+Science,What gas do plants use for photosynthesis?,,Carbon Dioxide,,Oxygen,,Nitrogen,,Helium,,A,Plants use carbon dioxide during photosynthesis to produce glucose and oxygen.,
+General Knowledge,What is the capital city of France?,,Paris,,London,,Berlin,,Tokyo,,A,Paris is the capital city of France.,
+Geography,Which continent is the Sahara Desert located on?,https://i.pinimg.com/originals/dc/55/a7/dc55a7baa9cbd457221ae6d12d9b1b51.jpg,Africa,,Asia,,Australia,,South America,,A,The Sahara Desert is located in Africa, covering parts of several countries including Egypt and Morocco.
+Physics,What is the formula for Newton's Second Law of Motion?,,F=ma,,E=mc?,,V=IR,,P=mv,,A,Newton's Second Law states that force equals mass times acceleration (F=ma).,
+Literature,Who wrote the play "Romeo and Juliet"?,,William Shakespeare,,Jane Austen,,Charles Dickens,,Mark Twain,,A,William Shakespeare wrote the famous tragedy "Romeo and Juliet" in the late 16th century.,
