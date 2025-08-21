@@ -40,3 +40,5 @@ export default function SplashScreen() {
     </SafeAreaView>
   );
 }
+
+I think I fiexed
